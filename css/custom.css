@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
 
 * {
     padding: 0;
@@ -15,6 +16,7 @@
 
 body {
     font-family: 'Epilogue', sans-serif;
+    background-color: var(--white);
 }
 
 h1,h2,h3,h4,h5,h6,p,a {
@@ -118,6 +120,66 @@ header .right a:hover {
     border-color: var(--black);
 }
 
+header .dropdown {
+    position: relative;
+}
+
+header .dropdown-menu {
+    display: none;
+    flex-direction: column;
+    gap: .7rem;
+    position: absolute;
+    top: 2.8rem;
+    background-color: white;
+    padding: 1rem 1.5rem;
+    box-shadow: 8px 16px 32px rgba(231, 231, 231);
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+
+header .features .dropdown-menu {
+    left: -4rem;
+    right: 0;
+}
+
+header .dropdown-menu.show {
+    display: flex;
+}
+
+header .features .dropdown-menu a {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+header .features i {
+    font-size: 1.1rem;
+}
+
+header .features .dropdown-menu a:first-child i {
+    color: #726CEE;
+}
+
+header .features .dropdown-menu a:nth-child(2) i {
+    color: #4BB1DA;
+}
+
+header .features .dropdown-menu a:nth-child(3) i {
+    color: #DBC32C;
+}
+
+header .features .dropdown-menu a:last-child i {
+    color: #8E4CB6;
+}
+
+header .company .dropdown-menu {
+    right: -2rem;
+    left: 0;
+}
+
 /* Hero */
 .hero {
     padding: 7rem 1rem 5rem 1rem;
@@ -173,6 +235,7 @@ header .right a:hover {
 .hero .cta {
     background-color: var(--black);
     color: var(--white);
+    border: 1px solid var(--black);
     padding: 1.2rem 1.6rem;
     font-weight: 700;
     border-radius: 1rem;
@@ -185,6 +248,11 @@ header .right a:hover {
     -moz-transition: all .5s ease;
     -ms-transition: all .5s ease;
     -o-transition: all .5s ease;
+}
+
+.hero .cta:hover {
+    background-color: transparent;
+    color: var(--black);
 }
 
 .hero .companies {

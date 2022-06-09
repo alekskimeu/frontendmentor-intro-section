@@ -19,12 +19,39 @@
           snap
         </h1>
         <nav class="menu">
-          <a href="#">Features
-            <i class="fas fa-chevron-down"></i>
-          </a>
-          <a href="#">Company
-            <i class="fas fa-chevron-down"></i>
-          </a>
+          <div class="dropdown features">
+            <a href="#" class="feature" onclick="showFeaturesMenu()">Features
+              <i class="fas fa-chevron-down" id="features-icon"></i>
+            </a>
+            <div class="dropdown-menu" id="features-menu">
+              <a href="#">
+                <i class="fas fa-calendar-alt"></i>
+                Todo List
+              </a>
+              <a href="#">
+                <i class="fas fa-calendar"></i>
+                Calendar
+              </a>
+              <a href="#">
+                <i class="fas fa-bell"></i>
+                Reminders                
+              </a>
+              <a href="#">
+                <i class="fas fa-clock"></i>
+                Planning
+              </a>
+            </div>
+          </div>
+          <div class="dropdown company">
+            <a href="#" onclick="showCompanyMenu()">Company
+              <i class="fas fa-chevron-down" id="company-icon"></i>
+            </a>
+            <div class="dropdown-menu" id="company-menu">
+              <a href="#">History</a>
+              <a href="#">Our Team</a>
+              <a href="#">Blog</a>
+            </div>
+          </div>
           <a href="#">Careers</a>
           <a href="#">About</a>
         </nav>
@@ -65,5 +92,6 @@
     </div>
   </section>
 
+  <script src="./js/script.js"></script>
 </body>
 </html>
